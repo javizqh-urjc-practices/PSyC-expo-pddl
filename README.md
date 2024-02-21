@@ -27,7 +27,16 @@ Finalmente, generad una tabla en la que se resuma la compatibilidad de cada plan
 
 *[Respuesta: Tabla comparativa]*
 
-
+| Features | POPF | OPTIC | Sam Elige |
+| --- | --- | --- | --- |
+| `:disjunctive-preconditions` | a | a | a |
+| `:existential-preconditions` | a | a | a |
+| `:universal-preconditions` | a | a | a |
+| `:conditional-effects` | a | a | a |
+| `:numeric-fluents` | a | a | a |
+| `:durative-actions` | a | a | a |
+| `:continuous-effects` | a | a | a |
+| `:negative-preconditions` | a | a | a |
 
 ## Entrega del trabajo
 El trabajo se presentará en clase el próximo lunes 26 de febrero. Además, en este repositorio deberéis añadir los ficheros PDDL para los ejemplos generados, debidamente referenciados en el README.
