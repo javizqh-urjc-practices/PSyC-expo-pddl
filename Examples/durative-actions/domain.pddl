@@ -45,7 +45,7 @@
   :condition 
     (and
       (at start (item_at ?it ?l))
-      (at start (robot_at ?r ?l))
+      (over all  (robot_at ?r ?l))
       (at start (gripper_free ?r))
     )
 :effect
@@ -65,7 +65,7 @@
 :duration (= ?duration 5)
 :condition
   (and 
-    (at start (robot_at ?r ?l))
+    (over all (robot_at ?r ?l))
     (at start (robot_carry ?r ?it))
   )
 :effect 
