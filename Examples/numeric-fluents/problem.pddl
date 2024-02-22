@@ -5,30 +5,29 @@
   table floor - location
   organic_trashbin - location
   paper_trashbin - location
-  bottle newspaper rotten_apple - item
-  walle - robot
+  bottle newspaper rotten_apple cake - item
+  Bender - robot
 )
 
 ; Initially everything is on the floor and robot is by the table
 (:init
 
-  (= (item_weight bottle) 3)
-  (= (item_weight newspaper) 2)
-  (= (item_weight rotten_apple) 1)
+  (= (item_energy bottle) 50)
+  (= (item_energy newspaper) 10)
+  (= (item_energy rotten_apple) 5)
+  (= (item_energy cake) 30)
 
-  (robot_at walle table)
-  (gripper_free walle)
-  (item_at bottle floor)
+  (= (energy Bender) 30)
+
+  (robot_at Bender floor)
+  (item_at bottle table)
   (item_at newspaper floor)
   (item_at rotten_apple floor)
+  (item_at cake table)
 )
 
 ; The goal is to clean the floor!
-(:goal (and
-    (item_at bottle table)
-    (item_at rotten_apple organic_trashbin)
-    (item_at newspaper paper_trashbin)
-  )
+(:goal (> (energy Bender) 95)
 )
 
 )

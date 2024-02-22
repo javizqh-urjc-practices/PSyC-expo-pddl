@@ -1,5 +1,5 @@
 (define (domain recycling_example)
-(:requirements :strips :typing :fluents)
+(:requirements :strips :typing :numeric-fluents)
 
 
 ; Types definition
@@ -12,12 +12,11 @@
 (:predicates
   (robot_at ?r - robot ?l - location)
   (item_at ?it - item ?l - location)
-  (gripper_free ?r - robot)
-  (robot_carry ?r - robot ?it - item)
 )
 
 (:functions
-  (item_weight ?it - item)
+  (energy ?r - robot)
+  (item_energy ?it - item)
 )
 
 ; Move action. The robot moves from one location (A) to another (B).
@@ -36,45 +35,17 @@
     )
 )
 
-; Pick-up action. The robot picks an object at a location.
-; Both the robot and the object must be in that location.
-; The robot's gripper must be free.
-; Consequences:
-;     - The item is no longer at the given location.
-;     - The robot is now carrying the object and its gripper is not free.
-(:action pick
+(:action eat
   :parameters (?it - item ?l - location ?r - robot)
   :precondition 
     (and
       (item_at ?it ?l)
       (robot_at ?r ?l)
-      (gripper_free ?r)
     )
 :effect
   (and
-    (robot_carry ?r ?it)
+    (increase (energy ?r) (item_energy ?it))
     (not (item_at ?it ?l))
-    (not (gripper_free ?r)))
-  )
-
-; Drop-off action. The robot drops an object at a location.
-; The robot must be in that location and must be carrying that object.
-; Consequences:
-;     - The item is now at the given location.
-;     - The robot is no longer carrying the object and its gripper is free.
-(:action drop
-:parameters (?it - item ?l - location ?r - robot)
-:precondition
-  (and 
-    (robot_at ?r ?l)
-    (robot_carry ?r ?it)
-  )
-:effect 
-  (and 
-    (item_at ?it ?l)
-    (gripper_free ?r)
-    (not (robot_carry ?r ?it))
   )
 )
-
 )
