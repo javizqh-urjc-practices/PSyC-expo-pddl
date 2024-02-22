@@ -29,14 +29,14 @@ Finalmente, generad una tabla en la que se resuma la compatibilidad de cada plan
 
 | Features | POPF | OPTIC | FD |
 | --- | --- | --- | --- |
-| `:disjunctive-preconditions` | a | a | a |
-| `:existential-preconditions` | a | a | a |
-| `:universal-preconditions` | a | a | a |
-| `:conditional-effects` | a | a | a |
-| `:numeric-fluents` | a | a | a |
-| `:durative-actions` | a | a | a |
-| `:continuous-effects` | a | a | a |
-| `:negative-preconditions` | a | a | a |
+| `:disjunctive-preconditions` | No soportado | No soportado | Si |
+| `:existential-preconditions` | No soportado | No soportado | Si |
+| `:universal-preconditions` | Si, no en el goal | Si | Si |
+| `:conditional-effects` | No soportado | No soportado | Si |
+| `:numeric-fluents` | Si | Si | No soportado |
+| `:durative-actions` | Si | Si | No soportado |
+| `:continuous-effects` | Funciona | Da error | No soportado |
+| `:negative-preconditions` | No soportado | No soportado | Si |
 
 ## Entrega del trabajo
 El trabajo se presentará en clase el próximo lunes 26 de febrero. Además, en este repositorio deberéis añadir los ficheros PDDL para los ejemplos generados, debidamente referenciados en el README.
