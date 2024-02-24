@@ -1,0 +1,3 @@
+(verify t1)
+(verify t2)
+; cost = 2 (unit cost)

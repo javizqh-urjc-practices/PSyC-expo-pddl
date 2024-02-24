@@ -1,0 +1,5 @@
+(pick bottle table bender)
+(move bender table floor)
+(drop bottle floor bender)
+(pick bottle floor aspiradoras)
+; cost = 4 (unit cost)
