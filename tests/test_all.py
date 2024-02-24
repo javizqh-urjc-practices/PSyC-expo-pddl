@@ -23,7 +23,7 @@ class CONSTS():
 
     INVOKE_POPF = "ros2 run popf popf {domain} {problem}"
     INVOKE_OPTIC = "ros2 run optic_planner optic_planner {domain} {problem}"
-    INVOKE_FD = os.getenv("FD_PATH") + ' {domain} {problem} --search "astar(lmcut())"'  
+    INVOKE_FD = os.getenv("FD_PATH") + ' {domain} {problem} --search "astar(blind())"'  
 
     SUCCESS_ASSUMPTION = "Solution found"
 

@@ -13,7 +13,7 @@ Los planificadores a comparar serán POPF, OPTIC y uno más a elección del grup
 
 
 ## Estudio de compatibilidad con features de PDDL
-A continuación, seleccionad un subset de features que os parezcan interesantes del lenguaje. Por ejemplo: `durative-actions`, `existential-preconditions`, `negative-precontitions`, etc.). Después, verificad si están soportadas por cada uno de los planificadores.
+A continuación, seleccionad un subset de features que os parezcan interesantes del lenguaje. Por ejemplo: `durative-actions`, `existential-preconditions`, `negative-precontitions`, etc... Después, verificad si están soportadas por cada uno de los planificadores.
 
 Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 
@@ -21,7 +21,6 @@ Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 2. Crear un ejemplo mínimo, con un dominio y un problema sencillos en el que se utilice dicha feature para demostrarlo, comprobando el comportamiento de cada uno de los planificadores.
 
 *[Respuesta: Análisis features]*
-
 
 Finalmente, generad una tabla en la que se resuma la compatibilidad de cada planificador, con las features analizadas por filas y los planificadores por columnas. Podéis encontrar información de cómo generar tablas en formato Markdown de Github [aquí](https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables).
 
@@ -31,12 +30,15 @@ Finalmente, generad una tabla en la que se resuma la compatibilidad de cada plan
 | --- | --- | --- | --- |
 | `:disjunctive-preconditions` | No soportado | No soportado | Si |
 | `:existential-preconditions` | No soportado | No soportado | Si |
-| `:universal-preconditions` | Si, no en el goal | Si | Si |
+| `:universal-preconditions` | Si, no en el goal | Si | Soporte Medio |
 | `:conditional-effects` | No soportado | No soportado | Si |
 | `:numeric-fluents` | Si | Si | No soportado |
 | `:durative-actions` | Si | Si | No soportado |
-| `:continuous-effects` | Funciona | Da error | No soportado |
+| `:continuous-effects` | Si | Da error | No soportado |
 | `:negative-preconditions` | No soportado | No soportado | Si |
+| `:equality` | Si | Si | Si |
+| `:domain-axioms` | Si | Si | No soportado |
+| `:action-expansion` | Si | Si | Si |
 
 ## Entrega del trabajo
 El trabajo se presentará en clase el próximo lunes 26 de febrero. Además, en este repositorio deberéis añadir los ficheros PDDL para los ejemplos generados, debidamente referenciados en el README.
