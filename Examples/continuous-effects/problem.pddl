@@ -3,7 +3,6 @@
 ; We define 3 different items, 2 types of trash bins, one table and a robot
 (:objects
   party park - location
-  bottle newspaper rotten_apple - item
   Bender - robot
 )
 
