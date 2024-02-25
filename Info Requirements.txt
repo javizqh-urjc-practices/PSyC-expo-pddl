@@ -1,0 +1,32 @@
+:disjunctive-preconditions
+POPF: No son admitidas explícitamente en PDDL, ya que no están incluidas en las especificación estándar de PDDL, pero sí lo son en STRIPS o ADL, ya que POPF se centra en que las acciones tengan precondiciones y efectos, pero sin admitir las disyuntivas directamente.
+
+:existential-preconditions
+POPF: No están directamente soportadas por PDDL, ya que establecen que al menos una de las precondiciones debe ser verdadera, algo que difiere con las precondiciones conjuntivas, ya que éstas establecen que todas deben ser verdaderas (exist es de PDDL 1.1).
+
+:universal-preconditions
+POPF: Sí están soportadas, ya que establecen que todas las condiciones de la precondición deben ser verdaderas, ya que POPF se centra en la generación de planes parcialmente ordenados a partir de un espacio de estados, algo que todavía no se ha optimizado en esta versión de PDDL. Aunque el forall en el goal no está soportado (PDDL 1.1).
+
+:conditional-effects
+POPF: No los soporta, ya que PDDL sólo permite la especificación de efectos deterministas, es decir, los que ocurren siempre cuando se ejecuta una acción.
+
+:numeric-fluents
+POPF: Sí están soportados, permitiendo definir funciones que manejen valores numéricos.
+
+:durative-actions
+POPF: Sí, permiten modelar acciones con una duración de tiempo determinada.
+
+:continuous-effects
+POPF: Sí están soportados, afectando al estado del mundo de forma contínua en vez de instantánea.
+
+:negative-preconditions
+POPF: No están soportadas, ya que PDDL no admite precondiciones negativas ni en el dominio ni en el problema.
+
+:equality
+POPF: Sí está soportada, permitiendo establecer relaciones de igualdad entre objetos.
+
+:domain-axioms
+POPF: Sí están soportados, permitiendo especificar restricciones en las acciones y estados del dominio.
+
+:action-expansions
+POPF: Sí están soportadas, permitiendo definir acciones compactas y parametrizadas que a su vez contienen otras acciones.
