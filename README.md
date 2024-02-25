@@ -23,8 +23,12 @@ Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 *[Respuesta: Análisis features]*
 
 :disjunctive-preconditions
-- [Dominio con ejemplos](Examples/disjunctive-preconditions)
-- POPF: No son admitidas expl�citamente en PDDL, ya que no est�n incluidas en las especificaci�n est�ndar de PDDL, pero s� lo son en STRIPS o ADL, ya que POPF se centra en que las acciones tengan precondiciones y efectos, pero sin admitir las disyuntivas directamente.
+- Carpeta con un [ejemplo](Examples/disjunctive-preconditions) sencillo.
+- Carpeta con [test](tests/disjunctive-preconditions) básico.
+- POPF: No son admitidas explícitamente en PDDL, ya que no están incluidas en las especificación estándar de PDDL, pero sí lo son en STRIPS o ADL, ya que POPF se centra en que las acciones tengan precondiciones y efectos, pero sin admitir las disyuntivas directamente.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :existential-preconditions
 - POPF: No est�n directamente soportadas por PDDL, ya que establecen que al menos una de las precondiciones debe ser verdadera, algo que difiere con las precondiciones conjuntivas, ya que �stas establecen que todas deben ser verdaderas (exist es de PDDL 1.1).
