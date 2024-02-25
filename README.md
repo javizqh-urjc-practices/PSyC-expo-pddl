@@ -22,6 +22,41 @@ Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 
 *[Respuesta: Análisis features]*
 
+:disjunctive-preconditions
+- [Dominio con ejemplos](Examples/disjunctive-preconditions)
+- POPF: No son admitidas expl�citamente en PDDL, ya que no est�n incluidas en las especificaci�n est�ndar de PDDL, pero s� lo son en STRIPS o ADL, ya que POPF se centra en que las acciones tengan precondiciones y efectos, pero sin admitir las disyuntivas directamente.
+
+:existential-preconditions
+- POPF: No est�n directamente soportadas por PDDL, ya que establecen que al menos una de las precondiciones debe ser verdadera, algo que difiere con las precondiciones conjuntivas, ya que �stas establecen que todas deben ser verdaderas (exist es de PDDL 1.1).
+
+:universal-preconditions
+- POPF: S� est�n soportadas, ya que establecen que todas las condiciones de la precondici�n deben ser verdaderas, ya que POPF se centra en la generaci�n de planes parcialmente ordenados a partir de un espacio de estados, algo que todav�a no se ha optimizado en esta versi�n de PDDL. Aunque el forall en el goal no est� soportado (PDDL 1.1).
+
+:conditional-effects
+- POPF: No los soporta, ya que PDDL s�lo permite la especificaci�n de efectos deterministas, es decir, los que ocurren siempre cuando se ejecuta una acci�n.
+
+:numeric-fluents
+- POPF: S� est�n soportados, permitiendo definir funciones que manejen valores num�ricos.
+
+:durative-actions
+- POPF: S�, permiten modelar acciones con una duraci�n de tiempo determinada.
+
+:continuous-effects
+- POPF: S� est�n soportados, afectando al estado del mundo de forma cont�nua en vez de instant�nea.
+
+:negative-preconditions
+- POPF: No est�n soportadas, ya que PDDL no admite precondiciones negativas ni en el dominio ni en el problema.
+
+:equality
+- POPF: S� est� soportada, permitiendo establecer relaciones de igualdad entre objetos.
+
+:domain-axioms
+- POPF: S� est�n soportados, permitiendo especificar restricciones en las acciones y estados del dominio.
+
+:action-expansions
+- POPF: S� est�n soportadas, permitiendo definir acciones compactas y parametrizadas que a su vez contienen otras acciones.
+
+
 Finalmente, generad una tabla en la que se resuma la compatibilidad de cada planificador, con las features analizadas por filas y los planificadores por columnas. Podéis encontrar información de cómo generar tablas en formato Markdown de Github [aquí](https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables).
 
 *[Respuesta: Tabla comparativa]*
