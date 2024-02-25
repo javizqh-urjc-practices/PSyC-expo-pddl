@@ -11,6 +11,31 @@ Los planificadores a comparar serán POPF, OPTIC y uno más a elección del grup
 
 *[Respuesta: Información de planificador escogido]*
 
+El planificador elegido ha sido **Fast-Downward** una variante de fast-forward lanzada en 2004.
+La pagina oficial se puede encontrar [aqui](https://www.fast-downward.org/), donde encontraras informacion adicional sobre casos de uso y ejemplos.
+
+La instalación de fd se puede realizar siguiendo los pasos de esta [guía](https://github.com/aibasel/downward/blob/main/BUILD.md), donde los validadores son opcionales.
+
+Puedes comprobar que la instalación ha sido exitosa ejecutando los tests implementados en `/tests`
+Para ello ejecuta los siguientes comandos:
+
+```bash
+# Source all planners if not done previously
+export LD_PATH='/home/<path-to-fd>/fast-downward.py'
+source <your_popf_workspace_path>/install/setup.sh
+source <your_optic_workspace_path>/install/setup.sh
+
+# Clone and execute tests
+git clone https://github.com/Docencia-fmrico/trabajo-pddl-forocoches
+cd trabajo-pddl-forocoches/tests/
+
+python3 ./test_all.py
+```
+
+
+En cuanto a información adicional puedes obtener la leyenda de características admitidas en PDDL a traves de la [wiki](https://planning.wiki/ref/planners/fd) de PDDL. Además nuestra presentación inicial esta basada en la documentación de diseño original de fd publicado por Helmert en 2004 a traves de este [artículo](https://www.jair.org/index.php/jair/article/view/10457).
+
+
 
 ## Estudio de compatibilidad con features de PDDL
 A continuación, seleccionad un subset de features que os parezcan interesantes del lenguaje. Por ejemplo: `durative-actions`, `existential-preconditions`, `negative-precontitions`, etc... Después, verificad si están soportadas por cada uno de los planificadores.
