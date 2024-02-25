@@ -47,6 +47,25 @@ Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 
 *[Respuesta: Análisis features]*
 
+:action-expansion
+- Carpeta con [test](tests/action-expansion) básico.
+- POPF: En la documentación no se menciona que la feature esté soportada o no, ya que en si no se necesita añadir como un requirement, por lo tanto usamos el ejemplo para ver si lo soporta, que en este caso es afirmativo.
+- OPTIC: En la documentación no se menciona que la feature esté soportada o no, ya que en si no se necesita añadir como un requirement, por lo tanto usamos el ejemplo para ver si lo soporta, que en este caso es afirmativo.
+- Fast-Downward: En la documentación no se menciona que la feature esté soportada o no, ya que en si no se necesita añadir como un requirement, por lo tanto usamos el ejemplo para ver si lo soporta, que en este caso es afirmativo.
+
+:conditional-effects
+- Carpeta con un [ejemplo](Examples/conditional-effects) sencillo.
+- Carpeta con [test](tests/conditional-effects) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error avisando de que no lo soporta.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error avisando de que no lo soporta.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+
+:continuous-effects
+- Carpeta con un [ejemplo](Examples/continuous-effects) sencillo.
+- POPF: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- OPTIC: En la documentación se menciona que la feature está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error y no es capaz de generar un plan. Por lo tanto no soporta esta feature aunque en la documentación diga lo contrario.
+- Fast-Downward: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error, por lo tanto no lo soporta.
+
 :disjunctive-preconditions
 - Carpeta con un [ejemplo](Examples/disjunctive-preconditions) sencillo.
 - Carpeta con [test](tests/disjunctive-preconditions) básico.
@@ -54,65 +73,51 @@ Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 - OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
+:domain-axioms
+- Carpeta con [test](tests/domain-axioms) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador es capaz de crear un plaz coherente, por lo tanto aunque funcione con este ejemplo, no se puede saber si para cualquier ejemplo funcionará.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador es capaz de crear un plaz coherente, por lo tanto aunque funcione con este ejemplo, no se puede saber si para cualquier ejemplo funcionará.
+- Fast-Downward: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error, por lo tanto no lo soporta.
+
+:durative-actions
+- Carpeta con un [ejemplo](Examples/durative-actions) sencillo.
+- Carpeta con [test](tests/durative-actions) básico.
+- POPF: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- OPTIC: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- Fast-Downward: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error, por lo tanto no lo soporta.
+
+:equality
+- Carpeta con [test](tests/equality) básico.
+- POPF: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- OPTIC: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+
 :existential-preconditions
 - Carpeta con un [ejemplo](Examples/existential-preconditions) sencillo.
 - Carpeta con [test](tests/existential-preconditions) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error avisando de que no lo soporta.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error avisando de que no lo soporta.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
-:universal-preconditions
-- Carpeta con un [ejemplo](Examples/universal-preconditions) sencillo.
-- Carpeta con [test](tests/universal-preconditions) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
-
-:conditional-effects
-- Carpeta con un [ejemplo](Examples/conditional-effects) sencillo.
-- Carpeta con [test](tests/conditional-effects) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+:negative-preconditions
+- Carpeta con un [ejemplo](Examples/negative-preconditions) sencillo.
+- Carpeta con [test](tests/negative-preconditions) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no lo soprta.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no lo soprta.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :numeric-fluents
 - Carpeta con un [ejemplo](Examples/numeric-fluents) sencillo.
 - Carpeta con [test](tests/numeric-fluents) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- POPF: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- OPTIC: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
+- Fast-Downward: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo el planificador muestra un mensaje de error, por lo tanto no lo soporta.
 
-:durative-actions
-- Carpeta con un [ejemplo](Examples/durative-actions) sencillo.
-- Carpeta con [test](tests/durative-actions) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
-
-:continuous-effects
-- Carpeta con un [ejemplo](Examples/continuous-effects) sencillo.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
-:negative-preconditions
-- POPF: No est�n soportadas, ya que PDDL no admite precondiciones negativas ni en el dominio ni en el problema.
-
-:equality
-- Carpeta con [test](tests/equality) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
-
-:domain-axioms
-- Carpeta con [test](tests/domain-axioms) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
-
-:action-expansion
-- Carpeta con [test](tests/action-expansion) básico.
-- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
-- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+:universal-preconditions
+- Carpeta con un [ejemplo](Examples/universal-preconditions) sencillo.
+- Carpeta con [test](tests/universal-preconditions) básico.
+- POPF: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Pero no funciona en todos los casos, ya que si el forall está situado en el goal del problema el planificador dará error tal y como se indica en la documentación.
+- OPTIC: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 
