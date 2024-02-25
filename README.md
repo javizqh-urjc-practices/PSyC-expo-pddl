@@ -73,22 +73,19 @@ Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 - POPF: No est�n soportadas, ya que PDDL no admite precondiciones negativas ni en el dominio ni en el problema.
 
 :equality
-- Carpeta con un [ejemplo](Examples/equality) sencillo.
 - Carpeta con [test](tests/equality) básico.
 - POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :domain-axioms
-- Carpeta con un [ejemplo](Examples/domain-axioms) sencillo.
 - Carpeta con [test](tests/domain-axioms) básico.
 - POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
-:action-expansions
-- Carpeta con un [ejemplo](Examples/action-expansions) sencillo.
-- Carpeta con [test](tests/action-expansions) básico.
+:action-expansion
+- Carpeta con [test](tests/action-expansion) básico.
 - POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
