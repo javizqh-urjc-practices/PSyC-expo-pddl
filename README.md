@@ -25,40 +25,73 @@ Para demostrar el soporte de cada feature, es necesario hacer dos cosas:
 :disjunctive-preconditions
 - Carpeta con un [ejemplo](Examples/disjunctive-preconditions) sencillo.
 - Carpeta con [test](tests/disjunctive-preconditions) básico.
-- POPF: No son admitidas explícitamente en PDDL, ya que no están incluidas en las especificación estándar de PDDL, pero sí lo son en STRIPS o ADL, ya que POPF se centra en que las acciones tengan precondiciones y efectos, pero sin admitir las disyuntivas directamente.
 - POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
 - Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :existential-preconditions
-- POPF: No est�n directamente soportadas por PDDL, ya que establecen que al menos una de las precondiciones debe ser verdadera, algo que difiere con las precondiciones conjuntivas, ya que �stas establecen que todas deben ser verdaderas (exist es de PDDL 1.1).
+- Carpeta con un [ejemplo](Examples/existential-preconditions) sencillo.
+- Carpeta con [test](tests/existential-preconditions) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :universal-preconditions
-- POPF: S� est�n soportadas, ya que establecen que todas las condiciones de la precondici�n deben ser verdaderas, ya que POPF se centra en la generaci�n de planes parcialmente ordenados a partir de un espacio de estados, algo que todav�a no se ha optimizado en esta versi�n de PDDL. Aunque el forall en el goal no est� soportado (PDDL 1.1).
+- Carpeta con un [ejemplo](Examples/universal-preconditions) sencillo.
+- Carpeta con [test](tests/universal-preconditions) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :conditional-effects
-- POPF: No los soporta, ya que PDDL s�lo permite la especificaci�n de efectos deterministas, es decir, los que ocurren siempre cuando se ejecuta una acci�n.
+- Carpeta con un [ejemplo](Examples/conditional-effects) sencillo.
+- Carpeta con [test](tests/conditional-effects) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :numeric-fluents
-- POPF: S� est�n soportados, permitiendo definir funciones que manejen valores num�ricos.
+- Carpeta con un [ejemplo](Examples/numeric-fluents) sencillo.
+- Carpeta con [test](tests/numeric-fluents) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :durative-actions
-- POPF: S�, permiten modelar acciones con una duraci�n de tiempo determinada.
+- Carpeta con un [ejemplo](Examples/durative-actions) sencillo.
+- Carpeta con [test](tests/durative-actions) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :continuous-effects
-- POPF: S� est�n soportados, afectando al estado del mundo de forma cont�nua en vez de instant�nea.
-
+- Carpeta con un [ejemplo](Examples/continuous-effects) sencillo.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 :negative-preconditions
 - POPF: No est�n soportadas, ya que PDDL no admite precondiciones negativas ni en el dominio ni en el problema.
 
 :equality
-- POPF: S� est� soportada, permitiendo establecer relaciones de igualdad entre objetos.
+- Carpeta con un [ejemplo](Examples/equality) sencillo.
+- Carpeta con [test](tests/equality) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :domain-axioms
-- POPF: S� est�n soportados, permitiendo especificar restricciones en las acciones y estados del dominio.
+- Carpeta con un [ejemplo](Examples/domain-axioms) sencillo.
+- Carpeta con [test](tests/domain-axioms) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 :action-expansions
-- POPF: S� est�n soportadas, permitiendo definir acciones compactas y parametrizadas que a su vez contienen otras acciones.
+- Carpeta con un [ejemplo](Examples/action-expansions) sencillo.
+- Carpeta con [test](tests/action-expansions) básico.
+- POPF: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- OPTIC: En la documentación se menciona que la feature no está soportada, y al comprobarlo con el ejemplo se ve que el planificador se queda pillado, es decir, no funciona.
+- Fast-Downward: En la documentación se menciona que la feature está soportada, y al comprobarlo al ejecutar el ejemplo obtiene un plan coherente. Por lo tanto si está soportado.
 
 
 Finalmente, generad una tabla en la que se resuma la compatibilidad de cada planificador, con las features analizadas por filas y los planificadores por columnas. Podéis encontrar información de cómo generar tablas en formato Markdown de Github [aquí](https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables).
